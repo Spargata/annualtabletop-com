@@ -43,13 +43,21 @@ export default async function DemoPage({
 
   // Selection priority: explicit ?scenario beats ?segment; fall back to the
   // first anchor (public sector) if neither resolves.
+  // Destructure to give TS a non-undefined fallback (noUncheckedIndexedAccess).
+  const [firstAnchor] = anchors;
+  if (!firstAnchor) {
+    throw new Error(
+      "No demo anchors available — every segment is missing its anchor scenario.",
+    );
+  }
+
   const selectedScenarioSlug =
     params.scenario ??
     anchors.find((a) => a.segment.slug === params.segment)?.scenario.slug ??
-    anchors[0]?.scenario.slug;
+    firstAnchor.scenario.slug;
 
   const selected =
-    anchors.find((a) => a.scenario.slug === selectedScenarioSlug) ?? anchors[0];
+    anchors.find((a) => a.scenario.slug === selectedScenarioSlug) ?? firstAnchor;
 
   const heroSubtitle = params.segment
     ? `Pre-selected for your segment. Walk three injects on ${selected.scenario.title}, then download the AAR.`
