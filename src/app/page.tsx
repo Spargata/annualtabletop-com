@@ -23,11 +23,13 @@ export default function HomePage() {
         eyebrow="Annual Tabletop by Thagentix"
         title={
           <>
-            The AI cybersecurity tabletop platform{" "}
-            <span className="text-signal">built for the buyers who need it.</span>
+            The AI cybersecurity tabletop{" "}
+            <span className="text-signal">
+              your auditor, examiner, or carrier already trusts.
+            </span>
           </>
         }
-        subtitle={SITE.tagline}
+        subtitle="Atlas, our AI exercise director, runs a 60-minute session on your environment. You walk out with an HSEEP-conformant After-Action Report mapped to NIST, FFIEC, HIPAA, PCI, CJIS, and CMMC — ready to forward to whoever&rsquo;s asking."
         primaryCta={SITE.primaryCta}
         secondaryCta={{ label: "See the platform", href: "/platform" }}
         visual={
@@ -43,16 +45,20 @@ export default function HomePage() {
             </h3>
             <dl className="mt-3 space-y-2 text-xs text-ink-700">
               <div>
-                <dt className="font-semibold text-navy">Decisions</dt>
-                <dd>3 captured · 0 skipped</dd>
+                <dt className="font-semibold text-navy">Duration</dt>
+                <dd>62 minutes · 4 participants</dd>
               </div>
               <div>
-                <dt className="font-semibold text-navy">Frameworks exercised</dt>
-                <dd>NIST 800-84 · FEMA HSEEP · CISA CTEPs</dd>
+                <dt className="font-semibold text-navy">Decisions captured</dt>
+                <dd>3 of 3 · 0 skipped · all time-stamped</dd>
               </div>
               <div>
-                <dt className="font-semibold text-navy">AAR status</dt>
-                <dd>Ready to forward to auditor</dd>
+                <dt className="font-semibold text-navy">Framework crosswalk</dt>
+                <dd>NIST 800-84 · FEMA HSEEP · CISA CTEPs · CJIS v6.0</dd>
+              </div>
+              <div>
+                <dt className="font-semibold text-navy">Status</dt>
+                <dd>Ready to forward to state EM coordinator</dd>
               </div>
             </dl>
           </div>
@@ -69,7 +75,7 @@ export default function HomePage() {
       >
         <div className="container-wide">
           <div className="max-w-2xl">
-            <p className="eyebrow mb-3">Built for you if…</p>
+            <p className="eyebrow mb-3">Six buyers. One platform.</p>
             <h2
               id="segments"
               className="font-serif text-3xl font-semibold tracking-tight text-navy sm:text-4xl"
@@ -77,11 +83,12 @@ export default function HomePage() {
               Pick the page that matches your world.
             </h2>
             <p className="mt-3 text-ink-700">
-              The product is the same. The framework language, procurement path,
-              and AAR samples are tuned to each segment.
+              Atlas is the same engine for everyone. The scenario library,
+              framework crosswalks, AAR samples, and procurement language are
+              tuned to each segment so the page reads like you wrote it.
             </p>
           </div>
-          <ul className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+          <ul className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {SEGMENTS.map((s) => (
               <li key={s.slug}>
                 <SegmentCard segment={s} />
@@ -99,12 +106,14 @@ export default function HomePage() {
         <div className="container-tight text-center">
           <p className="eyebrow mb-3">90-second demo</p>
           <h2 className="font-serif text-3xl font-semibold tracking-tight text-navy sm:text-4xl">
-            Spend 90 seconds with Atlas. Leave with a sample AAR.
+            No sign-up. No sales call. A sample AAR in your inbox.
           </h2>
           <p className="mx-auto mt-4 max-w-prose text-ink-700">
-            Atlas, our AI exercise director, will walk you through three injects
-            on a sample scenario. At the end, download the AAR — the same
-            artifact a real exercise produces.
+            Pick the scenario closest to your world — county ransomware, bank
+            wire fraud, hospital EHR outage, SMB BEC — and Atlas will walk you
+            through three constrained decisions in about ninety seconds. At the
+            end, download the AAR. It&apos;s the same artifact a real exercise
+            produces.
           </p>
           <div className="mt-6 flex justify-center">
             <Button asChild size="lg">
@@ -122,24 +131,31 @@ export default function HomePage() {
             <h2 className="font-serif text-3xl font-semibold tracking-tight text-navy sm:text-4xl">
               Built where the incumbents aren&apos;t.
             </h2>
+            <p className="mt-3 text-ink-700">
+              Enterprise SOC platforms run the Fortune 500. CISA CTEPs are a
+              PDF. Consultants bill $25-50K for a half-day. Everyone else —
+              counties, banks, clinics, manufacturers, MSPs, non-profits — has
+              been stuck between a free template and a six-figure engagement.
+              We built for the middle.
+            </p>
           </div>
           <div className="mt-10 grid gap-6 md:grid-cols-3">
             <CapabilityCard
               index={1}
               title="Framework-aligned by default"
-              body="Every scenario maps to NIST, HSEEP, CTEPs, CSF, CJIS, HIPAA, FFIEC, PCI, and CMMC. Your AAR is graded on the same axes as your audit."
+              body="Every scenario maps to NIST CSF 2.0, NIST 800-84, FEMA HSEEP, CISA CTEPs, CJIS v6.0, HIPAA §164.308, FFIEC, PCI 12.10, and CMMC IR.L2-3.6.3. Your AAR is graded on the same axes as your audit."
               link={{ label: "See frameworks", href: "/frameworks" }}
             />
             <CapabilityCard
               index={2}
-              title="Audit-ready AAR"
-              body="HSEEP-conformant, decisions captured, evidence linked, crosswalk built in. PDF + DOCX, ready to forward."
+              title="AAR your auditor already trusts"
+              body="HSEEP-conformant. Every decision time-stamped, scored, and mapped to a framework control. PDF and DOCX, ready to forward to your FFIEC examiner, SOC 2 auditor, state EM coordinator, cyber carrier, or board."
               link={{ label: "Download a sample", href: "/sample-aar.pdf" }}
             />
             <CapabilityCard
               index={3}
-              title="Priced for our segments"
-              body="Tiers built for counties, MSPs, regulated SMBs, and non-profits — not a single enterprise SKU that prices everyone else out."
+              title="Priced for the buyer, not the brand"
+              body="Seven tiers, published pricing, no haggling. A non-profit tier, a sub-$5K SMB tier, and a partner tier for MSPs who run this for their whole book. No per-seat taxes. No $50K enterprise floor."
               link={{ label: "See pricing", href: "/pricing" }}
             />
           </div>
@@ -154,9 +170,11 @@ export default function HomePage() {
         <div className="container-wide text-center">
           <p className="eyebrow mb-3">Design partners</p>
           <p className="mx-auto max-w-2xl font-serif text-2xl text-navy">
-            We&apos;re working with design partners across county government,
-            regional healthcare, financial services, and MSP firms. Logos
-            appear here as design-partner agreements clear legal review.
+            Design partners are running real exercises across county
+            government, community banks and credit unions, regional healthcare,
+            manufacturing, and MSP firms. Logos appear here as design-partner
+            agreements clear legal review — we don&apos;t list anyone we
+            can&apos;t name.
           </p>
         </div>
       </section>
@@ -171,44 +189,88 @@ export default function HomePage() {
             q: "How much does it cost?",
             a: (
               <p>
-                Public pricing lives on{" "}
+                All seven tiers are published on{" "}
                 <Link href="/pricing" className="text-signal underline">
                   /pricing
                 </Link>
-                . Tiers run from a non-profit mission price through
-                state-agency / enterprise. No gating, no haggling.
+                . Non-profits start at an apply-only mission tier. General SMB
+                runs a flat $4,800/yr. Regulated SMB and Financial
+                Institutions sit between $14.5K and $24.5K. Public sector and
+                enterprise are quoted from a published anchor. No gating, no
+                haggling.
+              </p>
+            ),
+          },
+          {
+            q: "I&rsquo;m a bank / credit union / FinTech. Which page is mine?",
+            a: (
+              <p>
+                <Link
+                  href="/for/financial-institutions"
+                  className="text-signal underline"
+                >
+                  /for/financial-institutions
+                </Link>
+                . The scenario library, AAR samples, and crosswalks are tuned
+                to FFIEC IT Handbook, FFIEC CAT, NCUA ACET, NYDFS 23 NYCRR
+                §500, and the GLBA Safeguards Rule. Pricing is its own tier.
+              </p>
+            ),
+          },
+          {
+            q: "What&rsquo;s the difference between Regulated SMB and General SMB?",
+            a: (
+              <p>
+                <Link
+                  href="/for/regulated-smb"
+                  className="text-signal underline"
+                >
+                  Regulated SMB
+                </Link>{" "}
+                is for orgs whose annual exercise is mandated by SOC 2, HIPAA,
+                PCI, or CMMC.{" "}
+                <Link href="/for/smb" className="text-signal underline">
+                  General SMB
+                </Link>{" "}
+                is for orgs whose cyber carrier, customer, or board is asking —
+                no formal regulatory mandate. Same Atlas, different framework
+                language and different price.
               </p>
             ),
           },
           {
             q: "How long does a session take?",
-            a: "Most exercises run 45–75 minutes. The home-page demo is a 90-second guided sequence.",
+            a: "Most exercises run 45–75 minutes. The home-page demo is a 90-second guided sequence so you can see the artifact before you buy.",
           },
           {
             q: "Which frameworks do you support?",
-            a: "NIST CSF 2.0, NIST 800-84, FEMA HSEEP, CISA CTEPs, CJIS v6.0, HIPAA §164.308, FFIEC, PCI 12.10, and CMMC IR.L2-3.6.3 at launch.",
+            a: "NIST CSF 2.0, NIST 800-84, FEMA HSEEP, CISA CTEPs, CJIS v6.0, HIPAA §164.308, FFIEC IT Handbook, PCI DSS 12.10, and CMMC IR.L2-3.6.3 at launch. FFIEC CAT, NCUA ACET, NYDFS 23 NYCRR §500, and GLBA Safeguards crosswalks are bundled into the Financial Institutions tier.",
           },
           {
             q: "How do you handle our data?",
             a: (
               <p>
-                See{" "}
+                Encrypted in transit and at rest. U.S.-only hosting available.
+                Decisions and AAR content stay in your tenant. See{" "}
                 <Link href="/security" className="text-signal underline">
                   /security
                 </Link>{" "}
-                for encryption, hosting, retention, and DPA details.
+                for hosting region, retention, DPA, and access control
+                details.
               </p>
             ),
           },
           {
             q: "Who facilitates the session — you or us?",
-            a: "Atlas, our AI exercise director, runs the session. Your team participates. For MSPs, white-label mode strips Annual Tabletop branding so the partner delivers the experience under their own name.",
+            a: "Atlas, our AI exercise director, runs the session. Your team participates as the players. For MSPs, white-label mode strips Annual Tabletop branding so the partner delivers the experience under their own name. No human consultant needed in the room.",
           },
           {
             q: "Is white-label available?",
             a: (
               <p>
-                Yes — on the MSP tier. Full white-label kit details are on{" "}
+                Yes — on the MSP / Partner tier. Per-tenant AARs, per-tenant
+                access control, customer-deliverable in 48 hours. Full
+                white-label kit details on{" "}
                 <Link href="/for/msp" className="text-signal underline">
                   /for/msp
                 </Link>

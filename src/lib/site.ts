@@ -54,8 +54,10 @@ export const FOOTER_COLUMNS: ReadonlyArray<{
     title: "For",
     links: [
       { label: "Public sector", href: "/for/public" },
+      { label: "Financial institutions", href: "/for/financial-institutions" },
+      { label: "Regulated SMB", href: "/for/regulated-smb" },
       { label: "MSPs & IR consultants", href: "/for/msp" },
-      { label: "Regulated SMBs", href: "/for/smb" },
+      { label: "SMB (general)", href: "/for/smb" },
       { label: "Non-profits", href: "/for/non-profit" },
     ],
   },

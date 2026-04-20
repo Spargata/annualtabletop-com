@@ -17,38 +17,46 @@ export default function PlatformPage() {
     <>
       <Hero
         eyebrow="Platform"
-        title="The AI cybersecurity tabletop platform."
-        subtitle="Four core capabilities: AI-facilitated sessions, framework-aligned scenarios, audit-ready AARs, and multi-tenant delivery for MSPs."
+        title="One Atlas. Six buyer segments. Every exercise ends in an AAR."
+        subtitle="Annual Tabletop is an AI exercise director (Atlas), a framework-aligned scenario library, an HSEEP-conformant AAR generator, and a multi-tenant delivery layer for partners — in one product, not four."
         primaryCta={{ label: "Try the demo", href: "/demo" }}
         secondaryCta={{ label: "See pricing", href: "/pricing" }}
         textOnly
       />
 
       <section className="py-20">
-        <div className="container-wide grid gap-6 md:grid-cols-2">
-          <CapabilityCard
-            index={1}
-            title="AI-facilitated sessions"
-            body="Atlas, our AI exercise director, presents injects, captures decisions, and adapts within framework-aligned bounds. In-person or async. Never leaves HSEEP's guardrails."
-          />
-          <CapabilityCard
-            index={2}
-            title="Framework-aligned scenario library"
-            body="Every scenario maps to NIST, HSEEP, CTEPs, CSF, CJIS, HIPAA, FFIEC, PCI, CMMC. Crosswalks ship in the AAR."
-            link={{ label: "Browse scenarios", href: "/scenarios" }}
-          />
-          <CapabilityCard
-            index={3}
-            title="Audit-ready AAR generation"
-            body="HSEEP-conformant template. Decisions captured, evidence linked, crosswalks built in. Exportable to PDF and DOCX."
-            link={{ label: "Download sample AAR", href: "/sample-aar.pdf" }}
-          />
-          <CapabilityCard
-            index={4}
-            title="Multi-tenant + white-label"
-            body="MSP and IR partners run sessions under their own brand. Per-tenant AARs, per-tenant access control, customer-deliverable in 48 hours."
-            link={{ label: "White-label kit", href: "/for/msp" }}
-          />
+        <div className="container-wide">
+          <div className="max-w-2xl">
+            <p className="eyebrow mb-3">Four capabilities</p>
+            <h2 className="font-serif text-3xl font-semibold tracking-tight text-navy sm:text-4xl">
+              What you get when you run a session.
+            </h2>
+          </div>
+          <div className="mt-10 grid gap-6 md:grid-cols-2">
+            <CapabilityCard
+              index={1}
+              title="Atlas, our AI exercise director"
+              body="Atlas presents injects, keeps the clock, captures each decision as it&rsquo;s made, and adapts the next inject based on what your team actually did. It stays inside HSEEP guardrails — no &ldquo;creative&rdquo; drift off-framework. Runs live in a browser for the room, or async across a distributed team."
+            />
+            <CapabilityCard
+              index={2}
+              title="Framework-aligned scenario library"
+              body="Every scenario is authored against a primary framework and carries crosswalks to every other relevant one. FFIEC wire fraud scenarios carry NIST CSF + CJIS + NYDFS mappings. Hospital EHR outage scenarios carry HIPAA §164.308 + NIST CSF + PCI. Your AAR arrives graded on the same axes as your audit."
+              link={{ label: "Browse scenarios", href: "/scenarios" }}
+            />
+            <CapabilityCard
+              index={3}
+              title="Audit-ready AAR generation"
+              body="HSEEP-conformant template out of the box. Every decision time-stamped, scored against your plan, and linked to a framework control. Evidence attached. Crosswalk built in. Exports to PDF (for the examiner) and DOCX (for your remediation tracker) in under 30 seconds."
+              link={{ label: "Download sample AAR", href: "/sample-aar.pdf" }}
+            />
+            <CapabilityCard
+              index={4}
+              title="Multi-tenant + white-label for partners"
+              body="MSP and IR firms deliver Annual Tabletop as their own service: partner branding, partner colors, partner footer. Per-tenant isolation for client data, per-tenant access control, per-tenant AARs. Customer-deliverable inside 48 hours from session end."
+              link={{ label: "White-label kit", href: "/for/msp" }}
+            />
+          </div>
         </div>
       </section>
 
@@ -61,7 +69,9 @@ export default function PlatformPage() {
           </h2>
           <p className="mx-auto mt-4 max-w-prose text-ink-700">
             One pipeline. One source of truth for decisions. One audit-ready
-            output. (Diagram coming in the v1.1 visual design pass.)
+            output. No integrations required to get started — Atlas runs in a
+            browser. Optional SSO, SCIM, and webhooks land on higher tiers.
+            (Diagram coming in the v1.1 visual pass.)
           </p>
         </div>
       </section>
@@ -75,15 +85,17 @@ export default function PlatformPage() {
               How we&apos;re different.
             </h2>
             <p className="mt-3 text-ink-700">
-              A short snapshot — full battlecards on the product-management
-              competitive brief, available on request.
+              The incumbents win the Fortune 500. The free options serve the
+              truly under-resourced. Everyone in between has been choosing
+              between a template they have to drive themselves and a $50K
+              consulting engagement. Here&apos;s where we sit.
             </p>
           </div>
           <div className="mt-8">
             <ComparisonTable
               columns={[
                 "Annual Tabletop",
-                "Static-template player",
+                "Free / CISA CTEPs",
                 "Enterprise SOC platform",
                 "DIY with senior consultant",
               ]}
@@ -97,16 +109,27 @@ export default function PlatformPage() {
                   cells: ["yes", "no", "partial", "partial"],
                 },
                 {
-                  capability: "Priced for county / non-profit / SMB",
-                  cells: ["yes", "partial", "no", "no"],
+                  capability:
+                    "FFIEC / NCUA / NYDFS crosswalk in the AAR",
+                  cells: ["yes", "no", "partial", "partial"],
                 },
                 {
-                  capability: "White-label for MSP delivery",
+                  capability:
+                    "Priced for SMB, county, non-profit, community bank",
+                  cells: ["yes", "yes", "no", "no"],
+                },
+                {
+                  capability: "White-label for MSP / IR delivery",
                   cells: ["yes", "no", "no", "no"],
                 },
                 {
                   capability: "No per-user seat tax",
                   cells: ["yes", "yes", "no", "yes"],
+                },
+                {
+                  capability:
+                    "Repeatable — same platform for next year's exercise",
+                  cells: ["yes", "partial", "yes", "no"],
                 },
               ]}
             />
@@ -122,19 +145,21 @@ export default function PlatformPage() {
             Encrypted in transit and at rest. U.S.-only hosting available.
           </h2>
           <p className="mx-auto mt-3 max-w-prose text-ink-700">
-            Read the full write-up on{" "}
+            Decisions, evidence, and AARs stay in your tenant. Optional U.S.
+            single-region hosting for FFIEC, CJIS, and CMMC buyers. DPA and
+            SCC available on request. The full write-up — encryption,
+            retention, sub-processors, and access controls — lives on{" "}
             <Link href="/security" className="text-signal underline">
               /security
             </Link>
-            , including hosting region options, data retention, DPA/SCC, and
-            access controls.
+            .
           </p>
         </div>
       </section>
 
       <CTABlock
         title="See Atlas run a session in 90 seconds."
-        subtitle="No sign-up. Sample AAR downloadable at the end."
+        subtitle="No sign-up, no sales call, no calendar invite. Sample AAR downloadable at the end."
       />
     </>
   );

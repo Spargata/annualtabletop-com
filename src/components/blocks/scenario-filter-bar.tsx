@@ -9,8 +9,10 @@ import type { Scenario, ScenarioSegment } from "@/lib/content";
 const SEGMENT_LABEL: Record<ScenarioSegment | "all", string> = {
   all: "All segments",
   public: "Public sector",
+  "financial-institutions": "Financial institutions",
+  "regulated-smb": "Regulated SMB",
   msp: "MSP / IR",
-  smb: "Regulated SMB",
+  smb: "SMB (general)",
   "non-profit": "Non-profit",
 };
 

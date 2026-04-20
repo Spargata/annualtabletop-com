@@ -44,3 +44,14 @@ Thumbs.db
 .vscode/*
 !.vscode/settings.recommended.json
 .idea
+
+# SMB / network-mount tombstones
+# Created by macOS / Linux SMB clients when files are deleted or replaced
+# while the share is mounted. Safe to ignore — never commit.
+.smbdelete*
+**/.smbdelete*
+
+# Misc tooling
+*.swp
+*.swo
+*~

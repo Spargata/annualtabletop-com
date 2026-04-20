@@ -10,14 +10,15 @@ This repo is the public marketing site — `annualtabletop.com`. The product app
 
 | Concern              | Choice                                                  |
 | -------------------- | ------------------------------------------------------- |
-| Framework            | Next.js 15 (App Router, React 19)                       |
+| Framework            | Next.js 16 (App Router, React 19, Turbopack default)    |
 | Language             | TypeScript 5.6 (strict, `noUncheckedIndexedAccess`)     |
 | Styling              | Tailwind CSS 3.4 + `@tailwindcss/typography`            |
 | Components           | shadcn/ui-style primitives (Radix Slot + CVA)           |
 | Content layer        | MDX in repo (`src/content`) via `@next/mdx` + `gray-matter` |
 | Icons                | lucide-react                                            |
+| Linting              | ESLint 9 flat config (`eslint.config.mjs`)              |
 | Package manager      | pnpm 9.12.3                                             |
-| Node                 | 20.11+ (see `.nvmrc`)                                   |
+| Node                 | 24.x (see `.nvmrc`)                                     |
 | Hosting              | Vercel                                                  |
 
 The content layer choice is deliberately a swap candidate: the MDX frontmatter schema in `src/lib/content.ts` matches what a future Sanity or Payload instance would expose, so migration is mechanical when the content team needs multi-user editing.

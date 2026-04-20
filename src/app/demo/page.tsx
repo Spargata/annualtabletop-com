@@ -36,7 +36,7 @@ export default function DemoPage() {
           <h2 className="font-serif text-2xl font-semibold tracking-tight text-navy">
             Default is the public-sector anchor. Swap to match your world.
           </h2>
-          <ul className="mt-6 grid gap-4 sm:grid-cols-2">
+          <ul className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {anchors.map(({ segment, scenario }, idx) => (
               <li key={segment.slug}>
                 <Link

@@ -141,11 +141,15 @@ export default async function SegmentLandingPage({ params }: Params) {
               The AAR is the artifact. It&apos;s what your{" "}
               {slug === "public"
                 ? "state EM coordinator"
-                : slug === "msp"
-                  ? "client forwards to their carrier"
-                  : slug === "smb"
-                    ? "auditor"
-                    : "funder"}{" "}
+                : slug === "financial-institutions"
+                  ? "FFIEC / NCUA / NYDFS examiner"
+                  : slug === "regulated-smb"
+                    ? "SOC 2 / HIPAA / PCI auditor"
+                    : slug === "msp"
+                      ? "client forwards to their carrier"
+                      : slug === "smb"
+                        ? "insurance underwriter or customer questionnaire"
+                        : "funder"}{" "}
               actually reads. Every Annual Tabletop exercise produces one.
             </p>
             <div className="mt-6 flex flex-wrap gap-3">

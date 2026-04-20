@@ -9,7 +9,13 @@ import matter from "gray-matter";
  */
 
 export type ScenarioComplexity = "intro" | "intermediate" | "advanced";
-export type ScenarioSegment = "public" | "msp" | "smb" | "non-profit";
+export type ScenarioSegment =
+  | "public"
+  | "financial-institutions"
+  | "regulated-smb"
+  | "msp"
+  | "smb"
+  | "non-profit";
 
 export interface Scenario {
   slug: string;
