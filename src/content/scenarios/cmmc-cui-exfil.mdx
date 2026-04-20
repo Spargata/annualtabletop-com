@@ -1,0 +1,36 @@
+---
+title: "CUI Exfiltration on the Eve of CMMC L2 Assessment — DIB Scenario"
+summary: "A defense-industrial-base subcontractor finds CUI staged for exfil 11 days before its CMMC Level 2 C3PAO assessment. Walk DFARS 7012 72-hour reporting, NIST SP 800-171 R2 incident response, and the assessment-impact decision under live regulatory pressure."
+threatType: "Data Exfiltration / Insider-Adjacent"
+complexity: "advanced"
+segments: ["regulated-smb"]
+frameworks: ["CMMC IR.L2-3.6.3", "NIST SP 800-171 R2 §3.6", "DFARS 252.204-7012", "DoD CIO 72-hour reporting"]
+estimatedMinutes: 75
+learningObjectives:
+  - "Execute DFARS 252.204-7012 72-hour cyber incident reporting end-to-end."
+  - "Walk NIST SP 800-171 R2 §3.6 (Incident Response) controls 3.6.1, 3.6.2, 3.6.3 with documented evidence."
+  - "Decide whether to pause, proceed with caveats, or proceed with the C3PAO assessment under active investigation."
+  - "Produce an AAR mapped to CMMC IR.L2-3.6.3 assessment objective, ready for assessor review."
+---
+
+## Scenario context
+
+CMMC-specific anchor for the regulated-SMB segment, sized for defense-
+industrial-base subcontractors and primes preparing for CMMC Level 2
+assessment. Built around the documented IR exercise evidence assessors look
+for under IR.L2-3.6.3 plus the DoD-side reporting clock under DFARS
+252.204-7012.
+
+## Sample inject sequence
+
+1. **T+00:00** — DLP flags 4.2 GB staged in a privileged user's OneDrive,
+   archive-extension, mid-business-hours.
+2. **T+00:30** — Privileged user is your most senior engineer, on PTO this
+   week; their account is nominally MFA-protected.
+3. **T+01:15** — Counsel asks whether this constitutes a "cyber incident"
+   under DFARS 7012(a) before the 72-hour clock starts.
+4. **T+02:00** — C3PAO assessment-team lead calls: assessment kickoff is in
+   11 days. They want to know if you're going forward or postponing.
+
+> Full inject set unlocks in the live product. The marketing demo runs the
+> first three injects only.

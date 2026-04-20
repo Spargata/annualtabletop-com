@@ -1,0 +1,37 @@
+---
+title: "RMM Supply-Chain Compromise — Your Vendor Is the Threat Actor"
+summary: "Your remote monitoring & management vendor publishes a CVE confirming an authenticated update mechanism was abused. Atlas walks your team through the cross-tenant blast radius, customer comms, and the compensating-control story your insurers and auditors want to hear."
+threatType: "Supply-Chain Compromise / RMM"
+complexity: "advanced"
+segments: ["msp"]
+frameworks: ["NIST CSF 2.0", "NIST 800-161r1", "SOC 2 CC7.4/CC7.5", "CIS Controls v8 IG2"]
+estimatedMinutes: 60
+learningObjectives:
+  - "Map the cross-tenant blast radius and prioritize customer outreach by exposure."
+  - "Decide on emergency RMM disconnect under conflicting customer-SLA pressure."
+  - "Produce a per-tenant AAR plus a partner-internal incident summary in the same exercise."
+  - "Walk the SOC 2 CC7.4 + NIST 800-161r1 supply-chain response chain end-to-end."
+---
+
+## Scenario context
+
+Second MSP / IR-consultant anchor. The first MSP scenario covers a single
+client ransomware event; this one targets the higher-stakes case — a
+compromise in *your own* RMM tooling that puts every managed customer in the
+blast radius. Designed to surface the harder cross-tenant decisions: who to
+disconnect first, who to call first, and how to tell the story to a customer
+that is now both your victim and your audience.
+
+## Sample inject sequence
+
+1. **T+00:00** — RMM vendor posts CVE-2026-XXXXX rated 9.8; confirmed
+   in-the-wild exploitation; affected versions include yours.
+2. **T+00:25** — One of your tier-1 customers reports unauthorized PowerShell
+   on three endpoints. Telemetry timing matches the CVE window.
+3. **T+01:00** — A second customer threatens to invoke their MSP-services SLA
+   if you take their RMM offline without 24-hour notice.
+4. **T+01:45** — Cyber insurer's panel firm calls offering to take primary
+   IR; your retainer says you lead unless they decline.
+
+> Full inject set unlocks in the live product. The marketing demo runs the
+> first three injects only.

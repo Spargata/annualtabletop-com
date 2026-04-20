@@ -1,0 +1,37 @@
+---
+title: "ACH Payments-Rail Fraud — The Originator Your Examiner Calls First"
+summary: "An originating depository financial institution discovers a batch of fraudulent ACH credits already settled to mule accounts at a downstream bank. Walk the NACHA Rule 2.5 reversal sequence, the FFIEC IR chain, and the FinCEN SAR clock under live financial pressure."
+threatType: "Payments Fraud / ACH Origination"
+complexity: "advanced"
+segments: ["financial-institutions"]
+frameworks: ["FFIEC IT Handbook", "FFIEC CAT", "NACHA Operating Rules", "NYDFS 23 NYCRR §500", "GLBA Safeguards Rule", "BSA/AML"]
+estimatedMinutes: 75
+learningObjectives:
+  - "Execute the NACHA Operating Rules §2.5 reversal window inside the 5-banking-day clock."
+  - "Decide on customer-facing notification under conflicting Reg E and BSA confidentiality constraints."
+  - "Coordinate the FinCEN SAR filing decision against the 30-day initial deadline."
+  - "Produce a documented IR exercise artifact mapped to FFIEC CAT and NYDFS §500.17."
+---
+
+## Scenario context
+
+Second financial-institutions anchor scenario. While the wire-fraud scenario
+covers the inbound BEC/wire pattern, this scenario sits on the origination
+side of the ACH rails — the harder and rarer exercise. Built for community
+banks, credit unions, and FinTechs that act as ODFIs (originating depository
+financial institutions) and need documented evidence of a tested
+payments-fraud response for FFIEC, NCUA, NYDFS, and external auditor review.
+
+## Sample inject sequence
+
+1. **T+00:00** — Operations spots an anomalous batch totaling $1.4M across 47
+   credits to first-time receivers at the same downstream RDFI.
+2. **T+00:35** — RDFI calls back: 31 of 47 receivers are flagged
+   pass-through accounts; funds already swept.
+3. **T+01:10** — Counsel asks whether the SAR clock starts at detection or
+   at confirmation. BSA officer wants both answers in writing.
+4. **T+02:00** — Customer (the legitimate originator) demands a public
+   statement; PR is on the line.
+
+> Full inject set unlocks in the live product. The marketing demo runs the
+> first three injects only.

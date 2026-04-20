@@ -194,8 +194,8 @@ export default function HomePage() {
                   /pricing
                 </Link>
                 . Non-profits start at an apply-only mission tier. General SMB
-                runs a flat $4,800/yr. Regulated SMB and Financial
-                Institutions sit between $14.5K and $24.5K. Public sector and
+                runs a flat $1,200/yr. Regulated SMB and Financial
+                Institutions sit between $3.6K and $6.1K. Public sector and
                 enterprise are quoted from a published anchor. No gating, no
                 haggling.
               </p>

@@ -28,22 +28,43 @@ export default function AboutPage() {
             className="mx-auto h-40 w-40 rounded-full bg-gradient-to-br from-navy to-signal"
           />
           <div>
-            <p className="eyebrow mb-3">Founder</p>
+            <p className="eyebrow mb-3">Founder note</p>
             <h2 className="font-serif text-2xl font-semibold text-navy">
-              Founded by a practicing cybersecurity advisor.
+              Built by the people who run these exercises for a living.
             </h2>
             <p className="mt-3 text-ink-700">
-              [Founder bio placeholder — 200–300 words. Brand doc requires
-              explicit reference to ThagentixCyber as the founder&apos;s
-              advisory practice, as the credibility hand-off between the
-              SaaS brand and the practitioner track record.]
+              Annual Tabletop comes out of ThagentixCyber, our cybersecurity
+              advisory practice. For years we ran tabletop exercises the way
+              the industry expected us to: a Word template, a printed inject
+              packet, a conference room, four hours of senior-consultant time
+              billed by the hour, and a 40-page AAR that took another week to
+              write. Counties paid for it once a year because they had to.
+              Banks paid for it because their examiner asked. SMBs and
+              non-profits mostly skipped it.
             </p>
             <p className="mt-3 text-ink-700">
-              Until the bio lands, see the{" "}
+              The work was good. The economics were terrible. The same
+              practitioner-grade exercise that a Fortune 500 SOC paid a
+              boutique six figures for was the exercise a county or a credit
+              union or a regional MSP needed &mdash; at a price they could
+              fit into their actual security budget. The market was missing
+              a product, not more consultants.
+            </p>
+            <p className="mt-3 text-ink-700">
+              Annual Tabletop is the product we wished existed when we were
+              the ones flying out to facilitate. Atlas, our AI exercise
+              director, runs the room. The AAR generates with the framework
+              crosswalk already in it. The same artifact your auditor or
+              examiner or carrier expects &mdash; produced by the team
+              actually doing the work, not by a contractor reading
+              someone else&apos;s template.
+            </p>
+            <p className="mt-3 text-ink-700">
+              Background on the practice and the team:{" "}
               <Link href="https://thagentix.com" className="text-signal underline">
-                parent company page
-              </Link>{" "}
-              for background on Thagentix and ThagentixCyber.
+                thagentix.com
+              </Link>
+              .
             </p>
           </div>
         </div>

@@ -42,9 +42,10 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-  icons: {
-    icon: "/favicon.ico",
-  },
+  // Favicons and OG images are resolved via Next.js's filesystem-based
+  // metadata convention — see app/icon.png, app/apple-icon.png,
+  // app/opengraph-image.png. No manual `icons` or `openGraph.images`
+  // mapping is required.
 };
 
 export const viewport: Viewport = {

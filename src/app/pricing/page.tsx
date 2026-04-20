@@ -44,7 +44,7 @@ const TIERS: ReadonlyArray<PricingTier & { anchorId: string }> = [
   {
     anchorId: "smb-general",
     name: "General SMB",
-    price: "$4,800",
+    price: "$1,200",
     cadence: "/ year",
     blurb:
       "Entry tier for small and midsize businesses without a compliance regime — but with a carrier, customer, or board asking for IR readiness.",
@@ -60,7 +60,7 @@ const TIERS: ReadonlyArray<PricingTier & { anchorId: string }> = [
   {
     anchorId: "municipal-small-public",
     name: "Municipal / Small Public",
-    price: "$9,800",
+    price: "$2,450",
     cadence: "/ year",
     blurb:
       "For counties, cities, school districts, water utilities, and small state offices. Procurement-friendly.",
@@ -76,7 +76,7 @@ const TIERS: ReadonlyArray<PricingTier & { anchorId: string }> = [
   {
     anchorId: "regulated-smb",
     name: "Regulated SMB",
-    price: "$14,500",
+    price: "$3,625",
     cadence: "/ year",
     blurb:
       "For SOC 2, HIPAA, PCI, and CMMC-bound SMBs. Annual cadence aligned to your audit calendar. (FI buyers — see Financial Institutions tier.)",
@@ -93,7 +93,7 @@ const TIERS: ReadonlyArray<PricingTier & { anchorId: string }> = [
   {
     anchorId: "financial-institutions",
     name: "Financial Institutions",
-    price: "$24,500",
+    price: "$6,125",
     cadence: "/ year",
     blurb:
       "For community banks, credit unions, and FinTechs. FFIEC, NCUA, NYDFS, and GLBA crosswalks in every AAR. Examiner-ready evidence packet.",
@@ -112,7 +112,7 @@ const TIERS: ReadonlyArray<PricingTier & { anchorId: string }> = [
   {
     anchorId: "msp-partner",
     name: "MSP / Partner",
-    price: "From $1,500",
+    price: "From $375",
     cadence: "/ tenant / year",
     blurb:
       "Multi-tenant + white-label. Deliver tabletops to your customers under your own brand. Volume tiers below 10, 25, and 50 tenants.",
@@ -234,7 +234,7 @@ export default function PricingPage() {
                 </tr>
                 <tr>
                   <td className="py-3 pr-4 font-medium text-signal">Annual Tabletop</td>
-                  <td className="py-3 pr-4">$4.8K–$24.5K / year</td>
+                  <td className="py-3 pr-4">$1.2K–$6.1K / year</td>
                   <td className="py-3">AI facilitation, framework AAR, annual cadence — sized to who you are.</td>
                 </tr>
               </tbody>
