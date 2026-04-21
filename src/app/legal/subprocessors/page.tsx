@@ -41,16 +41,10 @@ const SUBPROCESSORS: ReadonlyArray<SubProcessor> = [
     touchesCustomerData: true,
   },
   {
-    category: "Authentication / SSO",
-    provider: "WorkOS",
-    purpose: "SAML 2.0, OIDC, SCIM provisioning",
-    region: "US",
-    touchesCustomerData: true,
-  },
-  {
     category: "Transactional email",
-    provider: "Postmark",
-    purpose: "Account, AAR delivery, and exercise-invite email",
+    provider: "Resend",
+    purpose:
+      "Account, magic-link, AAR delivery, and exercise-invite email. Transactional only — no marketing blasts.",
     region: "US",
     touchesCustomerData: true,
   },
@@ -140,6 +134,21 @@ export default function SubProcessorsPage() {
               Security page
             </Link>{" "}
             for the full data-flow description.
+          </p>
+
+          <p className="mt-6 text-sm text-ink-500">
+            <strong className="text-navy">
+              Authentication and session management
+            </strong>{" "}
+            are handled inside the Annual Tabletop application using an
+            open-source TypeScript auth library (BetterAuth). User records,
+            sessions, and credentials live in our own Postgres database under
+            our primary hosting provider — no third-party identity
+            sub-processor is used for self-serve tiers. Enterprise/FI tiers
+            that require SAML 2.0 or OIDC SSO will add a dedicated identity
+            partner (typically WorkOS) at the time of that deployment; we will
+            update this page and notify customers in writing before any such
+            sub-processor is added to an environment.
           </p>
         </div>
       </section>

@@ -108,12 +108,28 @@ export default function SecurityPage() {
 
           <Section heading="Authentication & access">
             <p>
-              SSO (SAML 2.0 and OIDC) is included on every paid tier, not
-              gated behind an enterprise add-on. Password-based auth requires
-              MFA; TOTP and WebAuthn supported. SCIM provisioning ships with
-              Enterprise / State and MSP / Partner tiers. Internal access to
-              production is least-privilege, SSO-gated, MFA-enforced, and
-              logged to an immutable audit stream.
+              Primary authentication runs inside the Annual Tabletop
+              application — no third-party identity sub-processor for
+              self-serve tiers. Supported methods: email + password with
+              mandatory 2FA (TOTP and WebAuthn / passkeys), magic-link
+              sign-in, and Google / Microsoft OAuth. User records, sessions,
+              and credentials live in our own Postgres under the primary
+              hosting provider.
+            </p>
+            <p>
+              SAML 2.0 and OIDC SSO are available on Financial Institutions,
+              Regulated SMB, MSP / Partner, and Enterprise / State tiers
+              through an identity partner (typically WorkOS) wired at the
+              time of deployment. SCIM provisioning ships with Enterprise /
+              State and MSP / Partner. When enterprise SSO is engaged for a
+              given customer, that provider is added to the sub-processor
+              list for that environment with written notice.
+            </p>
+            <p>
+              Internal access to production is least-privilege, MFA-enforced,
+              routed through a short-lived-credential broker, and logged to
+              the same immutable audit stream that customer tenants forward
+              to their SIEM.
             </p>
           </Section>
 
