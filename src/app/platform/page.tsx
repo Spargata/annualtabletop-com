@@ -36,7 +36,7 @@ export default function PlatformPage() {
             <CapabilityCard
               index={1}
               title="Atlas, our AI exercise director"
-              body="Atlas presents injects, keeps the clock, captures each decision as it&rsquo;s made, and adapts the next inject based on what your team actually did. It stays inside HSEEP guardrails — no &ldquo;creative&rdquo; drift off-framework. Runs live in a browser for the room, or async across a distributed team."
+              body="Atlas presents injects, keeps the clock, captures each decision as it\u2019s made, and adapts the next inject based on what your team actually did. It stays inside HSEEP guardrails — no \u201Ccreative\u201D drift off-framework. Runs live in a browser for the room, or async across a distributed team."
             />
             <CapabilityCard
               index={2}

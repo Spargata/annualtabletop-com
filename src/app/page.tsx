@@ -29,7 +29,7 @@ export default function HomePage() {
             </span>
           </>
         }
-        subtitle="Atlas, our AI exercise director, runs a 60-minute session on your environment. You walk out with an HSEEP-conformant After-Action Report mapped to NIST, FFIEC, HIPAA, PCI, CJIS, and CMMC — ready to forward to whoever&rsquo;s asking."
+        subtitle="Atlas, our AI exercise director, runs a 60-minute session on your environment. You walk out with an HSEEP-conformant After-Action Report mapped to NIST, FFIEC, HIPAA, PCI, CJIS, and CMMC — ready to forward to whoever\u2019s asking."
         primaryCta={SITE.primaryCta}
         secondaryCta={{ label: "See the platform", href: "/platform" }}
         visual={
@@ -202,7 +202,7 @@ export default function HomePage() {
             ),
           },
           {
-            q: "I&rsquo;m a bank / credit union / FinTech. Which page is mine?",
+            q: "I\u2019m a bank / credit union / FinTech. Which page is mine?",
             a: (
               <p>
                 <Link
@@ -218,7 +218,7 @@ export default function HomePage() {
             ),
           },
           {
-            q: "What&rsquo;s the difference between Regulated SMB and General SMB?",
+            q: "What\u2019s the difference between Regulated SMB and General SMB?",
             a: (
               <p>
                 <Link
