@@ -37,14 +37,45 @@ export default function SecurityPage() {
             .
           </p>
 
+          <div className="rounded-md border border-signal/30 bg-signal/5 p-5">
+            <p className="text-sm font-semibold text-navy">
+              State of infrastructure — design-partner phase
+            </p>
+            <p className="mt-2 text-sm text-ink-700">
+              Annual Tabletop is in pre-GA design-partner phase. The
+              production posture described on this page — multi-region
+              hosting, managed KMS, managed Postgres, WORM logging, documented
+              DR — is the environment every paid tenancy will run on at
+              general availability. Our current build environment is a
+              single-region VPS running Dokploy; it is used for development,
+              scripted demos, and design-partner exercises that do not
+              contain regulated customer data. Migration to the production
+              posture described below is tracked against first-paid-contract
+              and will be announced here and on the{" "}
+              <Link href="/status" className="text-signal underline">
+                status page
+              </Link>{" "}
+              with at least 30 days&rsquo; notice to design partners.
+            </p>
+          </div>
+
           <Section heading="Hosting & data residency">
             <p>
-              Annual Tabletop is hosted on a SOC 2 Type II cloud provider in
-              U.S. regions (us-east-1 primary, us-west-2 DR). Data does not
-              leave the United States by default. Enterprise / State tier
-              customers can request pinned single-region residency and, with
-              notice, FedRAMP-boundaried sub-processors for the components that
-              have them.
+              At general availability, Annual Tabletop runs on a SOC 2 Type II
+              infrastructure provider in U.S. regions with a primary U.S.
+              region and a second U.S. region pinned for disaster recovery.
+              Data does not leave the United States by default. Enterprise /
+              State tier customers can request pinned single-region residency
+              and, with notice, FedRAMP-boundaried sub-processors for the
+              components that have them. The specific GA provider is locked
+              ahead of the migration and added to the{" "}
+              <Link
+                href="/legal/subprocessors"
+                className="text-signal underline"
+              >
+                sub-processor list
+              </Link>{" "}
+              with 30 days&rsquo; notice.
             </p>
           </Section>
 
@@ -63,12 +94,13 @@ export default function SecurityPage() {
           <Section heading="Data handling & encryption">
             <p>
               Customer data is encrypted in transit with TLS 1.2 or higher and
-              at rest with AES-256. Keys are managed in AWS KMS under a
-              per-environment CMK hierarchy; dedicated-tenancy customers get
-              their own CMK. Database and object-storage backups run daily,
-              are encrypted with the same CMK, and are retained for 35 days.
-              Customer-requested deletion is honored within 30 days and
-              propagated to backups on the backup-retention rollover.
+              at rest with AES-256. Keys are managed in the infrastructure
+              provider&rsquo;s KMS under a per-environment CMK hierarchy;
+              dedicated-tenancy customers get their own CMK. Database and
+              object-storage backups run daily, are encrypted with the same
+              CMK, and are retained for 35 days. Customer-requested deletion
+              is honored within 30 days and propagated to backups on the
+              backup-retention rollover.
             </p>
           </Section>
 
@@ -96,13 +128,13 @@ export default function SecurityPage() {
               >
                 /legal/subprocessors
               </Link>
-              . Categories today include cloud hosting (AWS), database and
-              object storage (AWS RDS + S3), authentication (our own +
-              optionally your IdP), transactional email, error monitoring, and
-              foundation-model providers (Anthropic, OpenAI — tenant-scoped).
-              We commit to a 30-day notice window on new sub-processors that
-              touch customer data, with the right to object built into every
-              paid contract.
+              . Categories include cloud hosting, managed database and object
+              storage, authentication (our own stack, running on our Postgres
+              via BetterAuth), transactional email, error monitoring, and
+              foundation-model providers (Anthropic as primary, OpenAI as
+              fallback — tenant-scoped, zero-retention). We commit to a
+              30-day notice window on new sub-processors that touch customer
+              data, with the right to object built into every paid contract.
             </p>
           </Section>
 
@@ -158,13 +190,16 @@ export default function SecurityPage() {
 
           <Section heading="SOC 2, HIPAA & attestations">
             <p>
-              SOC 2 Type II is in progress — observation window closes in Q3
-              2026. Progress letters, a current SOC 2 Type I, CAIQ, and
-              SIG-Lite are available under mutual NDA through the Trust
-              Center. HIPAA BAA is available for covered-entity and
-              business-associate customers on the Hospital and Enterprise /
-              State tiers. FedRAMP equivalency sits on the Enterprise / State
-              roadmap for the second year post-launch.
+              SOC 2 Type II observation begins when the production
+              environment is live at GA; target Type II report completion is
+              12 months after observation start. CAIQ, SIG-Lite, and HECVAT
+              questionnaires are available under mutual NDA through the Trust
+              Center today as self-attested responses against the GA
+              architecture described on this page. HIPAA BAA is available at
+              GA for covered-entity and business-associate customers on the
+              Hospital and Enterprise / State tiers. FedRAMP equivalency sits
+              on the Enterprise / State roadmap for the second year
+              post-launch.
             </p>
           </Section>
 
@@ -265,7 +300,7 @@ export default function SecurityPage() {
           </h2>
           <p className="mt-3 text-ink-700">
             CAIQ, SIG-Lite, HECVAT (Lite and Full for public-sector / higher-ed
-            buyers), our latest SOC 2 progress letter, DPA, and BAA are
+            buyers), our current pre-SOC 2 self-assessment, DPA, and BAA are
             available under mutual NDA. Enterprise / State and MSP / Partner
             buyers can request a concierge session where our team walks your
             security reviewer through the questionnaire line-by-line.
