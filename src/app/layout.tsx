@@ -1,10 +1,9 @@
 import type { Metadata, Viewport } from "next";
-import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 import { SiteNav } from "@/components/site/site-nav";
 import { SiteFooter } from "@/components/site/site-footer";
 import { SkipLink } from "@/components/site/skip-link";
-import { Statcounter } from "@/components/site/statcounter";
+import { ConsentBanner } from "@/components/site/consent-banner";
 import { SITE } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -71,8 +70,7 @@ export default function RootLayout({
           {children}
         </main>
         <SiteFooter />
-        <Analytics />
-        <Statcounter />
+        <ConsentBanner />
       </body>
     </html>
   );

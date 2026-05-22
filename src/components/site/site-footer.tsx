@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { FOOTER_COLUMNS, SITE } from "@/lib/site";
+import { PrivacyChoicesButton } from "@/components/site/privacy-choices-button";
 
 /**
  * Footer, IA Section 2: 3 columns. Includes compliance/attribution block per Section 8.
@@ -107,6 +108,9 @@ export function SiteFooter() {
                 >
                   Status
                 </Link>
+              </li>
+              <li>
+                <PrivacyChoicesButton />
               </li>
             </ul>
           </div>

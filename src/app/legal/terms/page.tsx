@@ -19,7 +19,7 @@ export default function TermsPage() {
       <Hero
         eyebrow="Legal"
         title="Terms of service"
-        subtitle="Last updated 20 April 2026. These terms cover the marketing site, self-serve access, and free trials. Paying customers are governed by their signed Master Subscription Agreement (MSA) rather than this page."
+        subtitle="Last updated 21 May 2026. These terms cover the marketing site, self-serve access, and free trials. Paying customers are governed by their signed Master Subscription Agreement (MSA) rather than this page."
         textOnly
       />
 
@@ -156,6 +156,183 @@ export default function TermsPage() {
             sector customers, we default to the customer&apos;s jurisdiction
             where procurement rules require.
           </p>
+
+          <h2>Third-party services</h2>
+          <p>
+            Annual Tabletop relies on third-party providers to deliver the
+            service. Each provider has its own terms of service and privacy
+            policy that apply when their services are used through our
+            platform.
+          </p>
+          <ul>
+            <li>
+              <strong>Vercel</strong> &mdash; hosting and page-view analytics.{" "}
+              <a
+                href="https://vercel.com/legal/terms"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Terms
+              </a>{" "}
+              /{" "}
+              <a
+                href="https://vercel.com/legal/privacy-policy"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Privacy
+              </a>
+            </li>
+            <li>
+              <strong>StatCounter</strong> &mdash; aggregate page-view
+              analytics.{" "}
+              <a
+                href="https://statcounter.com/about/legal/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Terms
+              </a>{" "}
+              /{" "}
+              <a
+                href="https://statcounter.com/about/privacy/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Privacy
+              </a>
+            </li>
+            <li>
+              <strong>Anthropic</strong> &mdash; Atlas AI facilitator
+              (primary model provider).{" "}
+              <a
+                href="https://www.anthropic.com/legal/terms"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Terms
+              </a>{" "}
+              /{" "}
+              <a
+                href="https://www.anthropic.com/legal/privacy"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Privacy
+              </a>
+            </li>
+            <li>
+              <strong>OpenAI</strong> &mdash; Atlas AI facilitator (fallback
+              model provider).{" "}
+              <a
+                href="https://openai.com/policies/terms-of-use"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Terms
+              </a>{" "}
+              /{" "}
+              <a
+                href="https://openai.com/policies/privacy-policy"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Privacy
+              </a>
+            </li>
+            <li>
+              <strong>Resend</strong> &mdash; transactional email
+              (invitations, magic links, AAR delivery).{" "}
+              <a
+                href="https://resend.com/legal/terms-of-service"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Terms
+              </a>{" "}
+              /{" "}
+              <a
+                href="https://resend.com/legal/privacy-policy"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Privacy
+              </a>
+            </li>
+            <li>
+              <strong>Sentry</strong> &mdash; application error monitoring.{" "}
+              <a
+                href="https://sentry.io/terms/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Terms
+              </a>{" "}
+              /{" "}
+              <a
+                href="https://sentry.io/privacy/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Privacy
+              </a>
+            </li>
+            <li>
+              <strong>Stripe</strong> &mdash; subscription billing and
+              invoicing.{" "}
+              <a
+                href="https://stripe.com/legal/ssa"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Terms
+              </a>{" "}
+              /{" "}
+              <a
+                href="https://stripe.com/privacy"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Privacy
+              </a>
+            </li>
+            <li>
+              <strong>Amazon Web Services</strong> &mdash; cloud hosting
+              infrastructure.{" "}
+              <a
+                href="https://aws.amazon.com/service-terms/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Terms
+              </a>{" "}
+              /{" "}
+              <a
+                href="https://aws.amazon.com/privacy/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Privacy
+              </a>
+            </li>
+          </ul>
+          <p>
+            A current list of sub-processors that touch customer data is
+            maintained at{" "}
+            <Link href="/legal/subprocessors">/legal/subprocessors</Link>.
+          </p>
+
+          <div className="not-prose rounded-md border border-status-warning/30 bg-status-warning/5 p-4">
+            <p className="text-sm font-semibold text-navy">
+              AARs are decision-support artifacts
+            </p>
+            <p className="mt-1.5 text-sm text-ink-700">
+              After-action reports generated by Annual Tabletop are
+              decision-support artifacts, not legal or regulatory advice.
+              Consult qualified counsel before treating an AAR as evidence
+              of compliance with a specific regulation.
+            </p>
+          </div>
 
           <h2>Changes to these terms</h2>
           <p>

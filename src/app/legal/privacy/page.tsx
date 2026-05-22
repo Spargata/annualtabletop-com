@@ -19,7 +19,7 @@ export default function PrivacyPage() {
       <Hero
         eyebrow="Legal"
         title="Privacy policy"
-        subtitle="Last updated 20 April 2026. This policy is operational and binding on us; counsel review may clarify wording. Where counsel review changes a material commitment, we will announce it on the status page 30 days before it takes effect."
+        subtitle="Last updated 21 May 2026. This policy is operational and binding on us; counsel review may clarify wording. Where counsel review changes a material commitment, we will announce it on the status page 30 days before it takes effect."
         textOnly
       />
 
@@ -76,6 +76,137 @@ export default function PrivacyPage() {
             custom scenario, it is covered by the DPA and the security
             commitments on the{" "}
             <Link href="/security">Security page</Link>.
+          </p>
+
+          <h2>Cookies and local storage</h2>
+          <p>
+            The marketing site sets the following cookies and localStorage
+            keys. Items marked &ldquo;analytics&rdquo; are only set after you
+            accept the consent banner.
+          </p>
+          <div className="not-prose mt-4 overflow-x-auto">
+            <table className="w-full border-collapse text-sm">
+              <thead>
+                <tr className="border-b border-paper-200 text-left text-navy">
+                  <th className="py-2 pr-4 font-semibold">Name</th>
+                  <th className="py-2 pr-4 font-semibold">Type</th>
+                  <th className="py-2 pr-4 font-semibold">Purpose</th>
+                  <th className="py-2 font-semibold">Duration</th>
+                </tr>
+              </thead>
+              <tbody className="text-ink-700">
+                <tr className="border-b border-paper-200 align-top">
+                  <td className="py-3 pr-4 font-medium text-navy">
+                    analytics_consent
+                  </td>
+                  <td className="py-3 pr-4">localStorage</td>
+                  <td className="py-3 pr-4">
+                    Stores your cookie-consent choice (accepted or rejected)
+                  </td>
+                  <td className="py-3">30&nbsp;days (re-prompts after expiry)</td>
+                </tr>
+                <tr className="border-b border-paper-200 align-top">
+                  <td className="py-3 pr-4 font-medium text-navy">
+                    analytics_consent_timestamp
+                  </td>
+                  <td className="py-3 pr-4">localStorage</td>
+                  <td className="py-3 pr-4">
+                    Records when the consent choice was made, used for
+                    30-day expiry calculation
+                  </td>
+                  <td className="py-3">30&nbsp;days</td>
+                </tr>
+                <tr className="border-b border-paper-200 align-top">
+                  <td className="py-3 pr-4 font-medium text-navy">
+                    is_unique
+                  </td>
+                  <td className="py-3 pr-4">
+                    Cookie (third-party, StatCounter)
+                  </td>
+                  <td className="py-3 pr-4">
+                    Identifies unique visitors for aggregate page-view
+                    counts. Only set when analytics consent is accepted.
+                  </td>
+                  <td className="py-3">Session</td>
+                </tr>
+                <tr className="border-b border-paper-200 align-top">
+                  <td className="py-3 pr-4 font-medium text-navy">
+                    sc_is_visitor_unique
+                  </td>
+                  <td className="py-3 pr-4">
+                    Cookie (third-party, StatCounter)
+                  </td>
+                  <td className="py-3 pr-4">
+                    Determines whether a visitor has been counted before in
+                    aggregate statistics. Only set when analytics consent is
+                    accepted.
+                  </td>
+                  <td className="py-3">2&nbsp;years</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p className="mt-4">
+            Vercel Analytics (our primary page-view analytics) is cookieless
+            by design and does not set any cookies. It is loaded only after
+            you accept the consent banner.
+          </p>
+
+          <h2>Cookie consent</h2>
+          <p>
+            A consent banner appears on your first visit. You have two
+            choices: <strong>Accept</strong> or <strong>Reject</strong>.
+            If you accept, analytics scripts (Vercel Analytics and
+            StatCounter) are loaded. If you reject, no analytics scripts
+            load and no analytics cookies are set.
+          </p>
+          <p>
+            Your choice is stored in your browser&apos;s localStorage for
+            30&nbsp;days. After 30&nbsp;days the banner re-appears so you
+            can make a fresh choice. You can change your choice at any time
+            using the &ldquo;Privacy Choices&rdquo; link in the site
+            footer.
+          </p>
+
+          <h2>Global Privacy Control</h2>
+          <p>
+            We honor the{" "}
+            <a
+              href="https://globalprivacycontrol.org/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Global Privacy Control
+            </a>{" "}
+            (GPC) signal. When your browser sends{" "}
+            <code className="rounded bg-paper-50 px-1 text-[0.9em]">
+              Sec-GPC: 1
+            </code>
+            , we treat it as a legally binding opt-out: analytics are
+            automatically rejected without showing the consent banner. This
+            applies under the CCPA/CPRA, Colorado Privacy Act, and other
+            U.S. state privacy laws that recognize GPC as a valid opt-out
+            mechanism.
+          </p>
+
+          <h2>Do Not Sell or Share</h2>
+          <p>
+            Annual Tabletop does not sell or share personal data as defined
+            by the California Consumer Privacy Act (CCPA) and the California
+            Privacy Rights Act (CPRA). We do not run advertising trackers,
+            do not share data with data brokers, and do not engage in
+            cross-context behavioral advertising.
+          </p>
+          <p>
+            You can opt out of all analytics at any time using the consent
+            banner or the &ldquo;Privacy Choices&rdquo; link in the site
+            footer. For CCPA-specific data requests (right to know, right
+            to delete, right to opt out), email{" "}
+            <a href="mailto:privacy@annualtabletop.com">
+              privacy@annualtabletop.com
+            </a>
+            . We do not discriminate against users who exercise their
+            privacy rights.
           </p>
 
           <h2>How Atlas processes exercise text</h2>
